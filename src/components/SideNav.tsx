@@ -4,9 +4,11 @@ import Search from '@mui/icons-material/Search'
 
 function SideNavItem({ name, icon }) {
   return (
-    <span className="flex justify-between py-4 px-8">
+    <span className="flex justify-between py-4 px-8 ">
       {icon}
+      <span className="hover:border-b-2 hover:border-y-green-400 hover:pb-1">
       {name}
+      </span>
     </span>
   );
 }

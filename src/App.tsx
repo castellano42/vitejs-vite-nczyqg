@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SideNav from './components/SideNav';
 import TopNav from './components/TopNav';
+import BookGrid from './components/BookGrid';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <header className="col-span-2 bg-gray-700">
         <TopNav />
       </header>
-      <div className="row-span-1 col-span-2">03</div>
+      <div className="row-span-1 col-span-2 bg-gray-700"><BookGrid/></div>
     </div>
   );
 }
