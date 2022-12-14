@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import SideNav from './components/SideNav';
 import TopNav from './components/TopNav';
-import BookGrid from './components/BookGrid';
+import MainArea from './components/MainArea';
 
 function App() {
   return (
     <div
-      className="grid grid-rows-[50px_1fr_1fr_120px]
-     grid-flow-col h-screen w-screen"
-    >
+      className="grid grid-rows-[70px_1fr_1fr_220px] 
+     grid-flow-col h-screen w-screen bg-gray-700">
       <aside className="row-span-3 bg-gray-900 ">
         <SideNav />
       </aside>
@@ -16,7 +15,7 @@ function App() {
       <div className="row-span-1 col-span-3 bg-gray-700">
         <TopNav />
       </div>
-      <main className="col-span-3 col-span-2">Bo</main>
+      <main className="col-span-3"><MainArea/></main>
     </div>
   );
 }
