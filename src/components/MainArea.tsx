@@ -3,7 +3,7 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 
 function MainArea() {
   return(
-    <div className="h">
+    <div>
     <span className="flex px-20">
       <div>
         <ActiveBookSection/>
@@ -59,7 +59,9 @@ function ActiveBookSection(){
   return(
     <div>
       <LargeBookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
-      <TracksBookmarks/>
+      <div className="py-8">
+        <TracksBookmarks/>
+      </div>
       </div>
   )
 }
@@ -84,20 +86,20 @@ function LargeBookCard({ image, title, author }) {
 function TracksBookmarks(){
   
   return(
-    <div className=" py-8 bg-gray-900 text-white">
-      <ul className="flex text-white">
-      <li className="border-r-2 border-x-gray-700 px-14 py-2">
-        <span className="hover:border-b-2 hover:border-y-green-400 hover:pb-1">
+    <div className="py-6 bg-gray-900 text-white">
+      <ul className="flex text-white font-bold text-lg">
+      <li className="px-14 py-2 hover:border-b-2 hover:border-y-blue-600 hover:pb-1">
+        <span className="">
           Audiobooks
         </span>
       </li>
-      <li className="border-r-2 border-x-gray-600 px-14 py-2">
-        <span className="hover:border-b-2 hover:border-y-green-400 hover:pb-1">
+      <li className="hover:border-b-2 hover:border-y-blue-600 hover:pb-1 px-14 py-2">
+        <span>
           E-Books
         </span>
       </li>
       </ul>
-      <div>
+      <div className="overflow-auto h-96">
         <TrackList/>
       </div>
     </div>
