@@ -6,7 +6,7 @@ import MainArea from './components/MainArea';
 function App() {
   return (
     <div
-      className="grid grid-rows-[70px_1fr_1fr_220px] 
+      className="grid grid-rows-[80px_1fr_1fr_220px] 
      grid-flow-col h-screen w-screen bg-gray-700">
       <aside className="row-span-3 bg-gray-900 ">
         <SideNav />
@@ -15,7 +15,7 @@ function App() {
       <div className="row-span-1 col-span-3 bg-gray-700">
         <TopNav />
       </div>
-      <main className="col-span-3"><MainArea/></main>
+      <main className="col-span-3 row-span-1"><MainArea/></main>
     </div>
   );
 }
