@@ -4,7 +4,7 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 function MainArea() {
   return(
     <div>
-    <span className="flex px-20">
+    <span className="flex pl-20">
       <div>
         <ActiveBookSection/>
       </div>
@@ -18,7 +18,7 @@ function MainArea() {
 
 function BookGrid() {
   return (
-    <div className="flex px-20 overflow-scroll grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-12">
+    <div className="flex h-[1000px] pl-16 pr-8 overflow-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-12">
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
@@ -88,7 +88,7 @@ function TracksBookmarks(){
   return(
     <div className="py-6 bg-gray-900 text-white">
       <ul className="flex text-white font-bold text-lg">
-      <li className="px-14 py-2 hover:border-b-2 hover:border-y-blue-600 hover:pb-1">
+      <li className="px-14 py-2 hover:border-b-2 hover:border-y-blue-400 hover:pb-1">
         <span className="">
           Audiobooks
         </span>
@@ -163,7 +163,7 @@ function TrackList(){
 
 function BookCard({ image, title, author }) {
   return (
-    <div className="h-60 w-52">
+    <div className="h-[270px] w-[235px]">
       <img src={image} alt="No Image" />
       <div className="p-2 bg-gray-900 text-gray-300">
         {title}
