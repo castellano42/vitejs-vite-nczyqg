@@ -4,7 +4,7 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 function MainArea() {
   return(
     <div>
-    <span className="flex pl-20">
+    <span className="flex pt-5 pl-20">
       <div>
         <ActiveBookSection/>
       </div>
@@ -18,7 +18,7 @@ function MainArea() {
 
 function BookGrid() {
   return (
-    <div className="flex h-[1000px] pl-16 pr-8 overflow-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-12">
+    <div className="flex h-[1000px] pl-16 pr-8 overflow-scroll scrollbar scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-700 grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-12">
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
@@ -76,7 +76,9 @@ function LargeBookCard({ image, title, author }) {
           {title}
           <div>by {author}</div>
           </div>
+          <div className="pt-2.5">
           <EqualizerIcon/>
+          </div>
         </span>
       </div>
     </div>
@@ -86,20 +88,20 @@ function LargeBookCard({ image, title, author }) {
 function TracksBookmarks(){
   
   return(
-    <div className="py-6 bg-gray-900 text-white">
-      <ul className="flex text-white font-bold text-lg">
-      <li className="px-14 py-2 hover:border-b-2 hover:border-y-blue-400 hover:pb-1">
+    <div className="py-6 bg-gray-900 text-white pr-2">
+      <ul className="flex justify-between text-white font-bold text-lg">
+      <li className="py-2 px-12 hover:border-b-2 hover:border-y-blue-600 hover:pb-1">
         <span className="">
           Audiobooks
         </span>
       </li>
-      <li className="hover:border-b-2 hover:border-y-blue-600 hover:pb-1 px-14 py-2">
+      <li className="hover:border-b-2 hover:border-y-blue-600 hover:pb-1 py-2 px-14">
         <span>
           E-Books
         </span>
       </li>
       </ul>
-      <div className="overflow-auto h-96">
+      <div className="overflow-auto pr-5 scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900 h-96">
         <TrackList/>
       </div>
     </div>
