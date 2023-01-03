@@ -1,5 +1,6 @@
 // import Search from '@mui/icons-material/Search'
 import EqualizerIcon from '@mui/icons-material/Equalizer';
+import Circle from '@mui/icons-material/Circle'
 
 function MainArea() {
   return(
@@ -18,7 +19,7 @@ function MainArea() {
 
 function BookGrid() {
   return (
-    <div className="flex h-[1000px] pl-16 pr-8 overflow-scroll scrollbar scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-700 grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-12">
+    <div className="flex h-[1000px] pl-16 pr-8 overflow-scroll scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-700 grid grid-flow-rows grid-cols-4 gap-x-4 gap-y-4">
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
       <BookCard image="https://dsxuu8etcj8kw.cloudfront.net/e/u/eu5c/eu5c-square-400.jpg" title="The Night Shift" author="Alex Finlay" />
@@ -68,16 +69,16 @@ function ActiveBookSection(){
 
 function LargeBookCard({ image, title, author }) {
   return (
-    <div className="w-96">
-      <img src={image} alt="No Image" />
-      <div className="p-4 bg-gray-900 text-gray-300">
+    <div>
+      <img src={image} alt="No Image" className="rounded-t-md"/>
+      <div className="p-4 bg-gray-900 text-gray-200 rounded-b-md">
         <span className="flex">
           <div className="pr-52">
           {title}
-          <div>by {author}</div>
+          <div className="text-gray-400">by {author}</div>
           </div>
           <div className="pt-2.5">
-          <EqualizerIcon/>
+          <EqualizerIcon className="text-lg"/>
           </div>
         </span>
       </div>
@@ -88,7 +89,7 @@ function LargeBookCard({ image, title, author }) {
 function TracksBookmarks(){
   
   return(
-    <div className="py-6 bg-gray-900 text-white pr-2">
+    <div className="py-6 bg-gray-900 text-white pr-2 rounded-md">
       <ul className="flex justify-between text-white font-bold text-lg">
       <li className="py-2 px-12 hover:border-b-2 hover:border-y-blue-600 hover:pb-1">
         <span className="">
@@ -101,7 +102,7 @@ function TracksBookmarks(){
         </span>
       </li>
       </ul>
-      <div className="overflow-auto pr-5 scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900 h-96">
+      <div className="overflow-auto pr-5 scrollbar scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-900 h-96">
         <TrackList/>
       </div>
     </div>
@@ -130,32 +131,22 @@ function TrackList(){
   { title: "Track 17", time: "2:55" }
 ];
 
-
-
-// const tracklist = () => {
-//   return (
-//     <>
-//       {tracks.map(({ title, time }) => (
-//         <ul>
-//           <li>
-//             {title}
-//             {time}
-//           </li>
-//         </ul>
-//       ))}
-//     </>
-//   );
-// };
-
   return(
       <>
         {tracks.map(({ title, time }) => (
           <ul>
             <li>
-              <span className="flex p-3  border-b border-gray-700">
-                <div className="pl-5 pr-56">{title}</div>
+              <div className="pl-5">
+              <span className="flex border-b">
+                <span className="flex pt-[8px] pb-[4.5px] w-[338px] border-gray-700 justify-between">
+                <div>{title}</div>
                 <div>{time}</div>
+                </span>
+                <div className="h-[15px] w-[15px] pl-[7px] text-green-400 text-3xl">
+                  &#183;
+                </div>
               </span>
+              </div>
             </li>
           </ul>
         ))}
@@ -165,11 +156,11 @@ function TrackList(){
 
 function BookCard({ image, title, author }) {
   return (
-    <div className="h-[270px] w-[235px]">
-      <img src={image} alt="No Image" />
-      <div className="p-2 bg-gray-900 text-gray-300">
+    <div className=" w-[275px]">
+      <img src={image} alt="No Image" className="rounded-t"/>
+      <div className="p-3 bg-gray-900 text-gray-200 rounded-b">
         {title}
-        <div>by {author}</div>
+        <div className="text-gray-400 ">by {author}</div>
       </div>
     </div>
   )
