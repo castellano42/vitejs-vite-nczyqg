@@ -69,7 +69,7 @@ function ActiveBookSection(){
 
 function LargeBookCard({ image, title, author }) {
   return (
-    <div>
+    <div className="pb-[11px]">
       <img src={image} alt="No Image" className="rounded-t-md"/>
       <div className="p-4 bg-gray-900 text-gray-200 rounded-b-md">
         <span className="flex">
