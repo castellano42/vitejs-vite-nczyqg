@@ -9,7 +9,7 @@ function BottomBar({image, title, author}){
   return(
     <div className="h-[220px]">
       <span className="flex justify-between pr-20">
-      <img src={image} alt="No Image" className="h-[205px]" />
+      <img src={image} alt="No Image" className="h-[220px]" />
       <BottomControls/>
       </span>
       </div>

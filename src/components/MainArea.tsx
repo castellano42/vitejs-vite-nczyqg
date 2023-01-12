@@ -1,6 +1,8 @@
 // import Search from '@mui/icons-material/Search'
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import Circle from '@mui/icons-material/Circle'
+import { useNavigate } from "react-router-dom";
+
 
 function MainArea() {
   return(
@@ -155,14 +157,21 @@ function TrackList(){
 }
 
 function BookCard({ image, title, author }) {
+  
+    const navigate = useNavigate();
+  
+    function handleClick() {
+      navigate("/BookAbout");
+    }
+  
   return (
-    <div className=" w-[275px]">
-      <img src={image} alt="No Image" className="rounded-t"/>
-      <div className="p-3 bg-gray-900 text-gray-200 rounded-b">
-        {title}
-        <div className="text-gray-400 ">by {author}</div>
+      <div onClick={handleClick} className=" w-[275px]">
+        <img src={image} alt="No Image" className="rounded-t"/>
+        <div className="p-3 bg-gray-900 text-gray-200 rounded-b">
+          {title}
+          <div className="text-gray-400 ">by {author}</div>
+        </div>
       </div>
-    </div>
   )
 }
 
